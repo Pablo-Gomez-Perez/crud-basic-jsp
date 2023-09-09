@@ -28,7 +28,7 @@
     					<h3>Clientes Registrados</h3>
     				</div>
     				<div class="col-md-2">
-    					<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#CreateForm">Nuevo</button>    					
+    					<button type="button" class="btn-fancy" data-bs-toggle="modal" data-bs-target="#CreateForm">Nuevo</button>    					
     				</div>
     			</div>
     		</div>
