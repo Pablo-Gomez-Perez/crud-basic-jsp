@@ -24,26 +24,32 @@
 	      	  	<div class="col-md-6">
 	      	  		<div class="form-group">
 	      	  			<div class="form-group">
-	      	  				<label class="form-label" for="apellidoCLiente">Apellido</label>
+	      	  				<label class="form-label" for="apellidoCliente">Apellido</label>
 	      	  				<input type="text" class="form-control" name="apellidoCliente"/>
 	      	  			</div>
 	      	  		</div>
-	      	  	</div>
-	      	  	<div class="row">
-	      	  		<div class="col-md-6">
-	      	  			<div class="form-group">
-	      	  			<label class="form-label" for="telefonoCliente">Telefono</label>
-	      	  			<input type="text" class="form-control" name="telefonoCliente"/>
-	      	  			</div>
-	      	  		</div>
-	      	  		<div class="col-md-6">
-	      	  			<div class="form-group">
-	      	  			<label class="form-label" for="comprasRegistradas">Compras Registradas</label>
-	      	  			<input type="number" class="form-control" name="comprasRegistradas"/>
-	      	  			</div>
-	      	  		</div>
+	      	  	</div>	      	  		      	  
+	      	  </div>
+	      	  <div class="row">
+	      	  	<div class="form-group">
+	      	  		<label class="form-label" for="emailCliente">Email</label>
+	      	  		<input type="email" class="form-control" name="emailCliente"/>
 	      	  	</div>
 	      	  </div>
+	      	  <div class="row">
+      	  		<div class="col-md-6">
+      	  			<div class="form-group">
+      	  			<label class="form-label" for="telefonoCliente">Telefono</label>
+      	  			<input type="text" class="form-control" name="telefonoCliente"/>
+      	  			</div>
+      	  		</div>
+      	  		<div class="col-md-6">
+      	  			<div class="form-group">
+      	  			<label class="form-label" for="comprasRegistradas">Compras Registradas</label>
+      	  			<input type="number" class="form-control" name="comprasRegistradas"/>
+      	  			</div>
+      	  		</div>
+      	  	</div>
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

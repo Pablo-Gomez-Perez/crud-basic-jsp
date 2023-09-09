@@ -41,6 +41,11 @@ public class Cliente {
 			return this;
 		}
 		
+		public Builder fechaRegistro(Date fechaRegistro) {
+			this.clt.setFechaRegistro(fechaRegistro);
+			return this;
+		}
+		
 		public Cliente build() {
 			return this.clt;
 		}

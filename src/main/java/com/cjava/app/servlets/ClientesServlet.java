@@ -2,11 +2,17 @@ package com.cjava.app.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Date;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.cjava.app.controller.ClienteController;
+import com.cjava.app.model.Cliente;
 
 /**
  * Servlet implementation class ClientesServlet
@@ -33,10 +39,27 @@ public class ClientesServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
+		Cliente cliente;
+		
+		try {
+			
+			cliente = Cliente
+					.builder(request.getParameter("codigoCliente"),request.getParameter("nombreCliente"))
+					.apellido(request.getParameter("apellidoCliente"))
+					.email(request.getParameter("emailCliente"))
+					.telefono(request.getParameter("telefonoCliente"))
+					.totalCompras(Double.parseDouble(request.getParameter("comprasRegistradas")))
+					.fechaRegistro(Date.valueOf(LocalDate.now()))
+					.build();
+			
+			ClienteController.insertCliente(cliente);
+			
+		}catch(Exception er) {
+			er.printStackTrace();
+		}
+		
 		doGet(request, response);
-		System.out.println(request.getParameter("codigoCliente"));
-		System.out.println(request.getParameter("nombreCliente"));
 	}
 
 	/**
