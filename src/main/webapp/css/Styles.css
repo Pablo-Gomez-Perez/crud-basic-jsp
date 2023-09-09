@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+.p-row{
+	
+	display: flex;
+	align-items: center;
+	background: rgb(195,34,124);
+	background: linear-gradient(21deg, rgba(195,34,124,1) 0%, rgba(224,108,40,1) 50%, rgba(253,45,45,1) 100%);
+	
+}
