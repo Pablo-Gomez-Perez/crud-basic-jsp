@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page import="com.cjava.app.model.Cliente" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,7 +9,7 @@
     <meta name="keywords" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=7">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">		
 	<link rel="stylesheet" href="css/Styles.css">
     <title>Document</title>
 </head>
@@ -46,6 +48,19 @@
 						<th>Acciones</th>
 					</tr>
 				</thead>
+				<tbody>
+					<c:forEach var="cliente" items="${clientes}">
+						<tr>
+							<td>${cliente.codigo}</td>
+							<td>${cliente.nombre}</td>
+							<td>${cliente.apellido}</td>
+							<td>${cliente.email}</td>
+							<td>${cliente.telefono}</td>
+							<td>${cliente.totalCompras}</td>
+							<td><button class="btn btn-primary">Edit</button></td>
+						</tr>
+					</c:forEach>
+				</tbody>
 			</table>
         </article>
         <article class="container">        	

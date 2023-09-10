@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 import java.sql.Date;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -32,7 +33,9 @@ public class ClientesServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.sendRedirect("index.jsp");
+		List<Cliente> clientes = ClienteController.clientes();
+		request.setAttribute("clientes", clientes);
+		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
 
 	/**
